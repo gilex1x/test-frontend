@@ -1,0 +1,10 @@
+@import './variables';
+@import './items';
+
+body{
+    width: $width-size;
+}
+.content{
+    display: grid;
+    grid-template-columns: 3;
+}

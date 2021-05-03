@@ -1,0 +1,18 @@
+/*--------------------*\
+    $COLORS
+\*--------------------*/
+/*--------------------*\
+    $MEDIA
+\*--------------------*/
+/*--------------------*\
+    $BOTONES
+\*--------------------*/
+body {
+  width: 100vw;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3;
+}
+/*# sourceMappingURL=index.css.map */
