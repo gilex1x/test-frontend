@@ -1,18 +1,2 @@
-/*--------------------*\
-    $COLORS
-\*--------------------*/
-/*--------------------*\
-    $MEDIA
-\*--------------------*/
-/*--------------------*\
-    $BOTONES
-\*--------------------*/
-body {
-  width: 100vw;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 3;
-}
+.beer-card{width:80%}.content{display:grid;grid-template-columns:repeat(3, 1fr)}@media only screen and (max-width: 900px){.content{grid-template-columns:repeat(2, 1fr)}}*{margin:0;padding:0;box-sizing:border-box}body{width:100%;font-family:'Poppins', sans-serif;margin-right:auto;margin-left:auto}
 /*# sourceMappingURL=index.css.map */
