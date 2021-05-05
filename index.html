@@ -21,7 +21,7 @@
         </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script>
-    <script type="text/x-handlebars-template" id="plantilla1">
+    <script type="text/x-handlebars-template" id="plantilla">
         {{#each products}}
             <div class="beer-card">
                 <img alt="beerUrl" src='../img/{{img}}'/>
@@ -32,18 +32,9 @@
             </div>
             {{/each}}
     </script>
-    <script type="text/x-handlebars-template" id="plantillaFiltro">
-        {{#each id}}
-            <div class="beer-card">
-                <img alt="beerUrl" src='../img/{{img}}'/>
-                <h2>{{name}}</h2>
-                <p>{{description}}</p>
-                <p>${{price}}</p>
-                <button>ADD TO CART</button>
-            </div>
-            {{/if}}
+ 
+    <script type="text/javascript" src="./public/scripts/filter.js">
+        
     </script>
-    <script type="text/javascript" src="./public/scripts/index.js"></script>    
-    <script type="text/javascript" src="./public/scripts/filter.js"></script>
 </body>
 </html>

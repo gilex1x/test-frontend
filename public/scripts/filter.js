@@ -1,15 +1,28 @@
+ 
 class Filter{
-    constructor(ObjectList){
-        this.ObjectList=ObjectList;
+    constructor(){
+        this.renderInicial();
     }
 
-    filter(id){
-        let filteredBeer=[];
-        this.ObjectList.products.forEach(beer => {
-            if(beer.filterId == id){
-                filteredBeer.push(beer);
-            }
-        });
+    async getData (){
+        const data = await fetch('../products.json')
+        .then(response=>response.json());
+        return data;
     }
-    
+
+    async renderInicial(){
+        
+        let template = document.getElementById('plantilla').innerHTML;
+        let compile = Handlebars.compile(template);
+        let contentHTML = compile(this.getData()); 
+        document.getElementById('content').innerHTML += contentHTML;
+    }    
 }
+
+const inicializar=()=>{
+    window.filtro = new Filter();
+    
+};
+
+inicializar();
+
