@@ -15,12 +15,13 @@ class Filter{
 
     handleChange(check){
         let cards = (this.data.products);
-        console.log(cards);
+        console.log(check);
         if(check.checked == true){
             cards.map(beer=>{
                 if(beer.filterId != check.value){
                     let tag =document.getElementById(`${beer.name}`);
-                    tag.classList.add('filtered');
+                    tag.classList.toggle('filtered');
+                    console.log(check.value);
                 }
             })
         }
