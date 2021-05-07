@@ -8,17 +8,15 @@
     padding:0;
     box-sizing: border-box;
 }
-
+.filtered{
+    display:none;
+}
 body{
     width: $width-size;
     font-family: 'Poppins', sans-serif;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-}
-
-main{ 
-    
 }
 
 

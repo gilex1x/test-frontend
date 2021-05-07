@@ -18,7 +18,10 @@ class Filter{
         console.log(cards);
         if(check.checked == true){
             cards.map(beer=>{
-                console.log(beer);
+                if(beer.filterId != check.value){
+                    let tag =document.getElementById(`${beer.name}`);
+                    tag.classList.add('filtered');
+                }
             })
         }
     }
