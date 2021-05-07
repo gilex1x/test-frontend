@@ -21,6 +21,7 @@
             <strong><input type="checkbox" value="1" onchange='filtro.handleChange(this)'/>Rubia</strong> 
             <strong><input type="checkbox" value="2" onchange='filtro.handleChange(this)'/>Morena </strong>
             <strong><input type="checkbox" value="3" onchange='filtro.handleChange(this)'/>Roja</strong>
+            <button onclick='filtro.filter(this)'>Filtrar</button>
         </div>
         <section id="content" class="content">
 
@@ -34,6 +35,7 @@
                 <h2>{{name}}</h2>
                 <p>{{description}}</p>
                 <p>${{price}}</p>
+                <p>{{filterId}}</p>
                 <button>ADD TO CART</button>
             </div>
             {{/each}}
