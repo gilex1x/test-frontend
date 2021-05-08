@@ -67,11 +67,8 @@ main{
             display:flex;
             bottom:0;
             position: fixed;
-            background-color: white;
-            
+            background-color: white;  
         }
-         
-        
     }
    
 }
@@ -129,7 +126,32 @@ main{
 }
 footer{
     .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: $color-dark;
-        height: 30vh;
+        color:white;
+        .contact-icons{
+            display: flex;
+            .contact-icons__icon{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin: 10px;
+                p{
+                    font-size: 25px;
+                    color: white;
+                }
+                i{
+                    background-color: white;
+                    padding: 25px ;
+                    border-radius: 50px;
+                    color: $color-dark;
+                    font-size: 50px;
+                }
+            }
+        }
     }
+
 }
