@@ -4,6 +4,7 @@
 .content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
     @include respond-to(900px){
         grid-template-columns: repeat(2,1fr);
     }

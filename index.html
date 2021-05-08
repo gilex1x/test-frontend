@@ -7,12 +7,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./public/css/index.css"/>
+    <link rel="stylesheet" href="public/css/style.css">
     <title>BeerSelection</title>
 </head>
 <body>
     <header>
-        <h2>This is a Header</h2>
-        
+        <i class="icon-logo"></i> 
+        <div>
+            <i class="icon-search"></i>
+            <i class="icon-cart"></i>
+        </div>
     </header>
     <main >
         <h2>Cervezas</h2>
@@ -31,7 +35,7 @@
     <script type="text/x-handlebars-template" id="plantilla">
         {{#each products}}
             <div class="beer-card" id='{{name}}'>
-                <img alt="beerUrl" src='../img/{{img}}'/>
+                <img alt="beerUrl" src='./public/img/{{img}}'/>
                 <h2>{{name}}</h2>
                 <p>{{description}}</p>
                 <p>${{price}}</p>

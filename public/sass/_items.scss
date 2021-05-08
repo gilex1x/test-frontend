@@ -11,4 +11,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    button{
+        width: $width-button;
+        height: $height-button;
+    }
+}
+
+header{
+    background-color: $color-dark;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 30px;
 }
