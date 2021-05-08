@@ -2,10 +2,11 @@
     $Layout
 \*--------------------*/
 .content{
+    margin: 5px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 10px;
-    @include respond-to(900px){
+    grid-gap: 20px;
+    @include respond-to(1025px){
         grid-template-columns: repeat(2,1fr);
     }
 }

@@ -19,14 +19,19 @@
         </div>
     </header>
     <main >
-        <h2>Cervezas</h2>
+        <div class="title">
+            <h2>Cervezas</h2>
         <div class="filtro">
             <h2>Filtros</h2>
-            <strong><input type="checkbox" value="1" onchange='filtro.handleChange(this)'/>Rubia</strong> 
-            <strong><input type="checkbox" value="2" onchange='filtro.handleChange(this)'/>Morena </strong>
-            <strong><input type="checkbox" value="3" onchange='filtro.handleChange(this)'/>Roja</strong>
+            <div>
+                <strong><input id="1" type="checkbox" value="1" onchange='filtro.handleChange(this)'/>Rubia</strong> 
+                <strong><input id="2" type="checkbox" value="2" onchange='filtro.handleChange(this)'/>Morena </strong>
+                <strong><input id="3" type="checkbox" value="3" onchange='filtro.handleChange(this)'/>Roja</strong>
+            </div>
             <button onclick='filtro.filter()'>Filtrar</button>
         </div>
+        </div>
+        
         <section id="content" class="content">
 
         </section>
@@ -36,9 +41,9 @@
         {{#each products}}
             <div class="beer-card" id='{{name}}'>
                 <img alt="beerUrl" src='./public/img/{{img}}'/>
-                <h2>{{name}}</h2>
-                <p>{{description}}</p>
-                <p>${{price}}</p>
+                <h2 class="name">{{name}}</h2>
+                <p class="description">{{description}}</p>
+                <p class="price">${{price}}</p>
                 <p>{{filterId}}</p>
                 <button>ADD TO CART</button>
             </div>

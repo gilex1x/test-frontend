@@ -22,47 +22,37 @@ class Filter{
                 document.getElementById(`${beer.name}`).classList.remove('filtered');
             }else{
                 document.getElementById(`${beer.name}`).classList.remove('filtered'); 
-                if(!ids.includes(beer.filterId.toString())){
+                if(!ids.includes(beer.filterId.toString())){//se conviuerte en to string por que es un
                     document.getElementById(`${beer.name}`).classList.toggle('filtered');
                 }
             }
             
         });
-           /* ids.forEach(item=>{
-                console.log(item);
-                if(beer.filterId != item){
-                    document.getElementById(`${beer.name}`).classList.toggle('filtered');
-                }
-            });*/
-        
+
+
     
+    }
+    cleanFilter(){
+        for(let i=1; i<4 ;i++){
+            if(document.getElementById(`${i}`).checked){
+                document.getElementById(`${i}`).click();
+            }
+        }
     }
 
     handleChange(check){
         
         if(check.checked){
             ids.push(check.value);
-            console.log(ids)
+            //console.log(ids)
         }else if(!check.checked){
          let i = ids.indexOf(check.value);
          if(i!= -1){
              ids.splice(i,1);
-             console.log(ids)
+             //console.log(ids)
          }   
         }
-        
-        /*let cards = (this.data.products);
-        console.log(check);
-        
-        if(check.checked == true){
-            cards.map(beer=>{
-                if(beer.filterId != check.value){
-                    let tag =document.getElementById(`${beer.name}`);
-                    tag.classList.toggle('filtered');
-                    console.log(check.value);
-                }
-            })
-        }*/
+
     }
         
         
