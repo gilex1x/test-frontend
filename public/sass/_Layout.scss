@@ -12,4 +12,9 @@
     @include respond-to(880px){
         grid-template-columns: repeat(2,1fr);
     }
+    @include respond-to(768px){
+        margin: 0px auto;
+        grid-template-columns: repeat(2,350px);
+        grid-gap: 10px;
+    }
 }

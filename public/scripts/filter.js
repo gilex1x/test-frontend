@@ -39,13 +39,11 @@ class Filter{
                 if(!ids.includes(beer.filterId.toString())){//se conviuerte en to string por que es un
                     document.getElementById(`${beer.name}`).classList.toggle('filtered');
                 }
-            }
-            
+            } 
         });
-
-
     
     }
+
     cleanFilter(){
         for(let i=1; i<4 ;i++){
             if(document.getElementById(`${i}`).checked){
@@ -54,9 +52,11 @@ class Filter{
         }
     }
 
-
-        
-        
+    responsiveMenu(){
+        let menu = document.getElementById('filtroMenu');
+        menu.classList.toggle('isActive');
+    }
+      
 }
 
 const inicializar=async ()=>{

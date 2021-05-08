@@ -30,6 +30,13 @@
         background-color: #F4F4F4;
         margin:5px;
     }
+    @include respond-to(768px){
+        .beer-card{
+            img{
+                width: 50px;
+            }
+        } 
+    }
 }
 
 header{
@@ -48,8 +55,23 @@ main{
     flex-direction: row;
     @include respond-to(768px){
         .filtro{
-            display: none;
+            display:none;
+            width: 99vw;
+            height:50vh;
+            flex-direction: column;
+            bottom: 100vw;
+            transition: .5s;
+
         }
+        .filtro.isActive{
+            display:flex;
+            bottom:0;
+            position: fixed;
+            background-color: white;
+            
+        }
+         
+        
     }
    
 }
