@@ -14,11 +14,25 @@ class Filter{
         document.getElementById('content').innerHTML += contentHTML;
     }
 
+    handleChange(check){
+        
+        if(check.checked){
+            ids.push(check.value);
+            //console.log(ids)
+        }else if(!check.checked){
+         let i = ids.indexOf(check.value);
+         if(i!= -1){
+             ids.splice(i,1);
+             //console.log(ids)
+         }   
+        }
+
+    }
     filter(){
         let cards = (this.data.products);
         cards.forEach(beer => {
             if(ids.length==0){
-                console.log("");
+                
                 document.getElementById(`${beer.name}`).classList.remove('filtered');
             }else{
                 document.getElementById(`${beer.name}`).classList.remove('filtered'); 
@@ -40,20 +54,7 @@ class Filter{
         }
     }
 
-    handleChange(check){
-        
-        if(check.checked){
-            ids.push(check.value);
-            //console.log(ids)
-        }else if(!check.checked){
-         let i = ids.indexOf(check.value);
-         if(i!= -1){
-             ids.splice(i,1);
-             //console.log(ids)
-         }   
-        }
 
-    }
         
         
 }

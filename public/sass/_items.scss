@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: white;
     .description{
         width: 80%;
         text-align: left;
@@ -19,6 +20,7 @@
         font-size: 15px;
         color:#6D7275;
     }
+    
     button{
         width: $width-button;
         height: $height-button;
@@ -33,21 +35,79 @@
 header{
     background-color: $color-dark;
     height: 50px;
+    padding: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     color: white;
     font-size: 30px;
 }
-.title{
+main{
+    margin: 5px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: row;
+    @include respond-to(768px){
+        .filtro{
+            display: none;
+        }
+    }
+   
+}
+.filtro{
     button{
-        background-color: $color-darkblue;
         width: $width-button;
         height: $height-button;
         border:none;
+        font-weight: 700;
+        font-size: 16px;
+        margin: 10px 5px;
+    }
+    .filter-btn{
         color: white;
+        background-color: $color-darkblue;
+    }
+    .clean-btn{
+        background-color: white;
+        
+    }
+
+    .filtro-list{
+        
+        .filtro-list__item{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: $height-button*2;
+            border:solid 1px #E5E5E5;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+}
+.responsive-button{
+    display: none;
+    @include respond-to(768px){
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+        position:fixed;
+        bottom: 0;
+        margin: 10px 0px;
+        button{
+            color: white;
+            background-color: $color-darkblue; 
+            width: $width-button;
+            height: $height-button;
+            border:none;
+        }
+    }
+}
+footer{
+    .contact{
+        background-color: $color-dark;
+        height: 30vh;
     }
 }

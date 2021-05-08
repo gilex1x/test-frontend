@@ -18,24 +18,45 @@
             <i class="icon-cart"></i>
         </div>
     </header>
-    <main >
-        <div class="title">
-            <h2>Cervezas</h2>
-        <div class="filtro">
-            <h2>Filtros</h2>
-            <div>
-                <strong><input id="1" type="checkbox" value="1" onchange='filtro.handleChange(this)'/>Rubia</strong> 
-                <strong><input id="2" type="checkbox" value="2" onchange='filtro.handleChange(this)'/>Morena </strong>
-                <strong><input id="3" type="checkbox" value="3" onchange='filtro.handleChange(this)'/>Roja</strong>
+    <h1>Cervezas</h1>
+    <main>
+            <div class="filtro">
+                <h2>Filtros</h2>
+                <ul class="filtro-list">
+                    <li class="filtro-list__item">
+                        <strong>Rubia</strong><input id="1" type="checkbox" value="1" onchange='filtro.handleChange(this)'/> 
+                    </li>
+                    <li class="filtro-list__item">
+                        <strong>Morena </strong><input id="2" type="checkbox" value="2" onchange='filtro.handleChange(this)'/>
+                    </li>
+                    <li class="filtro-list__item">
+                        <strong>Roja</strong><input id="3" type="checkbox" value="3" onchange='filtro.handleChange(this)'/>
+                    </li>
+                </ul>
+                <button class="clean-btn" onclick="filtro.cleanFilter()">Limpiar</button>
+                <button class="filter-btn" onclick='filtro.filter()'> <i class="icon-filters"></i>Filtrar</button>
             </div>
-            <button onclick='filtro.filter()'>Filtrar</button>
-        </div>
-        </div>
-        
-        <section id="content" class="content">
+            <section id="content" class="content">
 
-        </section>
+            </section>
     </main>
+
+    <footer>
+        <div class="contact">
+            <h2>¿Podemos ayudarte?</h2>
+            <h3>Iconos</h3>
+
+        </div>
+        <div class="links">
+
+        </div>
+    </footer>
+    <div class="responsive-button">
+        <button>
+            <i class="icon-filters"></i>Filtrar
+        </button>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script>
     <script type="text/x-handlebars-template" id="plantilla">
         {{#each products}}
@@ -43,8 +64,8 @@
                 <img alt="beerUrl" src='./public/img/{{img}}'/>
                 <h2 class="name">{{name}}</h2>
                 <p class="description">{{description}}</p>
-                <p class="price">${{price}}</p>
-                <p>{{filterId}}</p>
+                <h3 class="price">${{price}}</h3>
+            <!--<p>{{filterId}}</p>-->
                 <button>ADD TO CART</button>
             </div>
             {{/each}}
