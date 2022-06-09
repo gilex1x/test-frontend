@@ -1,2 +1,175 @@
-.beer-card{border:solid 1px #E5E5E5;display:flex;flex-direction:column;justify-content:center;align-items:center;background:white}.beer-card .description{width:80%;text-align:left;font-weight:400;font-size:15px;color:#6D7275}.beer-card button{width:165px;height:35px;color:#0000A3;font-weight:600;border:solid 1px #E5E5E5;background-color:#F4F4F4;margin:5px}@media only screen and (max-width: 768px){.beer-card .beer-card img{width:50px}}header{background-color:#0F0F0F;height:50px;padding:10px;display:flex;justify-content:space-between;align-items:center;color:white;font-size:30px}main{margin:5px;display:flex;flex-direction:row}@media only screen and (max-width: 768px){main .filtro{display:none;width:99vw;height:50vh;flex-direction:column;bottom:100vw;transition:.5s}main .filtro.isActive{display:flex;bottom:0;position:fixed;background-color:white}}.filtro button{width:165px;height:35px;border:none;font-weight:700;font-size:16px;margin:10px 5px}.filtro .filter-btn{color:white;background-color:#0000A3}.filtro .clean-btn{background-color:white}.filtro .filtro-list .filtro-list__item{padding:10px;display:flex;justify-content:space-between;align-items:center;height:70px;border:solid 1px #E5E5E5;border-left:none;border-right:none}.responsive-button{display:none}@media only screen and (max-width: 768px){.responsive-button{width:100vw;display:flex;justify-content:center;z-index:10;position:fixed;bottom:0;margin:10px 0px}.responsive-button button{color:white;background-color:#0000A3;width:165px;height:35px;border:none}}footer .contact{display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#0F0F0F;color:white}footer .contact .contact-icons{display:flex}footer .contact .contact-icons .contact-icons__icon{display:flex;flex-direction:column;justify-content:space-around;margin:10px}footer .contact .contact-icons .contact-icons__icon p{font-size:25px;color:white}footer .contact .contact-icons .contact-icons__icon i{background-color:white;padding:25px;border-radius:50px;color:#0F0F0F;font-size:50px}.content{display:grid;grid-template-columns:repeat(4, 1fr);grid-gap:20px}@media only screen and (max-width: 1025px){.content{grid-template-columns:repeat(3, 1fr)}}@media only screen and (max-width: 880px){.content{grid-template-columns:repeat(2, 1fr)}}@media only screen and (max-width: 768px){.content{margin:0px auto;grid-template-columns:repeat(2, 350px);grid-gap:10px}}*{margin:0;padding:0;box-sizing:border-box}.filtered{display:none}body{width:100%;font-family:'Poppins', sans-serif;text-align:center;align-items:center;background-color:#f4f4f4f4}button:hover{cursor:pointer}
+.beer-card {
+  border: solid 1px #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.beer-card .description {
+  width: 80%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 15px;
+  color: #6d7275;
+}
+.beer-card button {
+  width: 165px;
+  height: 35px;
+  color: #0000a3;
+  font-weight: 600;
+  border: solid 1px #e5e5e5;
+  background-color: #f4f4f4;
+  margin: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .beer-card .beer-card img {
+    width: 50px;
+  }
+}
+header {
+  background-color: #0f0f0f;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+main {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 768px) {
+  main .filtro {
+    display: none;
+    width: 99vw;
+    height: 50vh;
+    flex-direction: column;
+    bottom: 100vw;
+    transition: 0.5s;
+  }
+  main .filtro.isActive {
+    display: flex;
+    bottom: 0;
+    position: fixed;
+    background-color: white;
+  }
+}
+.filtro button {
+  width: 165px;
+  height: 35px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 10px 5px;
+}
+.filtro .filter-btn {
+  color: white;
+  background-color: #0000a3;
+}
+.filtro .clean-btn {
+  background-color: white;
+}
+.filtro .filtro-list .filtro-list__item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border: solid 1px #e5e5e5;
+  border-left: none;
+  border-right: none;
+}
+.responsive-button {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .responsive-button {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    margin: 10px 0px;
+  }
+  .responsive-button button {
+    color: white;
+    background-color: #0000a3;
+    width: 165px;
+    height: 35px;
+    border: none;
+  }
+}
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f0f;
+  color: white;
+}
+footer .contact .contact-icons {
+  display: flex;
+}
+footer .contact .contact-icons .contact-icons__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px;
+}
+footer .contact .contact-icons .contact-icons__icon p {
+  font-size: 25px;
+  color: white;
+}
+footer .contact .contact-icons .contact-icons__icon i {
+  background-color: white;
+  padding: 25px;
+  border-radius: 50px;
+  color: #0f0f0f;
+  font-size: 50px;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+@media only screen and (max-width: 1025px) {
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 880px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    margin: 0px auto;
+    grid-template-columns: repeat(2, 350px);
+    grid-gap: 10px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.filtered {
+  display: none;
+}
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  align-items: center;
+  background-color: #f4f4f4f4;
+}
+button:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=index.css.map */
